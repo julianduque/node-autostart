@@ -1,0 +1,24 @@
+{
+  "name": "autostart",
+  "version": "0.0.1",
+  "description": "Autostart a node process",
+  "main": "index.js",
+  "bin": "./bin/autostart",
+  "scripts": {
+    "test": "./node_modules/.bin/mocha --reporter spec"
+  },
+  "repository": "",
+  "author": "Julian Duque",
+  "license": "MIT",
+  "dependencies": {
+    "handlebars": "~1.0.10",
+    "optimist": "~0.4.0",
+    "prompt": "~0.2.9",
+    "mkdirp": "~0.3.5"
+  },
+  "readme": "README.md",
+  "devDependencies": {
+    "mocha": "~1.9.0",
+    "chai": "~1.5.0"
+  }
+}

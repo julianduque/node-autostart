@@ -13,6 +13,11 @@ $ npm install -g autostart
 ```
 $ autostart --os sunos --command forever start /opt/apps/server.js
 ```
+## Supported Platforms
+* SunOS (pending)
+* Linux (pending)
+* Darwin (pending)
+* Win32 (pending)
 
 ## License
 
