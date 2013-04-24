@@ -1,4 +1,4 @@
-# autostart [![Build Status](https://travis-ci.org/[YOUR_GITHUB_USERNAME]/[YOUR_PROJECT_NAME].png)](https://travis-ci.org/julianduque/node-autostart.png)
+# autostart [![Build Status](https://travis-ci.org/julianduque/node-autostart.png)](https://travis-ci.org/julianduque/node-autostart)
 
 Create autostart scripts for your applications!
 
