@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
 <!DOCTYPE service_bundle SYSTEM "/usr/share/lib/xml/dtd/service_bundle.dtd.1">
 
-<service_bundle type='manifest' name='site:autostart'>
+<service_bundle type='manifest' name='site:postboot'>
   <service
-    name='site/autostart'
+    name='site/postboot'
     type='service'
     version='1'>
 
