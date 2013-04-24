@@ -1,6 +1,6 @@
 {
   "name": "autostart",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Multiplatform autostart tool for Node.js applications",
   "main": "./lib/autostart.js",
   "bin": "./bin/autostart",
