@@ -8,10 +8,18 @@ Create autostart scripts for your applications!
 $ npm install -g autostart
 ```
 
-## Usage
+## Commands
+
+### service
 
 ```
-$ autostart --os sunos --command forever start /opt/apps/server.js
+$ autostart service --name nodeapp --platfrom sunos --start node app.js
+```
+
+### command
+
+```
+$ autostart command --platform sunos --command forever start /opt/apps/server.js
 ```
 ## Supported Platforms
 * SunOS (pending)

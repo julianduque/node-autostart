@@ -1,36 +1,11 @@
 #!/usr/bin/env node
 
-var autostart = require('../'),
-    optimist  = require('optimist'),
-    prompt    = require('prompt');
+var autostart = require('../lib/autostart');
 
-//
-// Override params
-//
-prompt.override = optimist.argv;
-
-//
-// Welcome
-//
-console.log('Welcome to' + 'Autostart'.grey);
-console.log('It worked if it ends with ' + 'Autostart '.grey + 'ok'.green);
-
-//
-// Start prompt
-//
-prompt.start();
-
-prompt.get(['os', 'command'], function (err, params) {
-  var os = params.os,
-      command = params.command;
-
-  if (err) {
-    console.log(err);
-    return console.log('autostart: ' + 'not ok'.red);
+autostart.start(function (err) {
+  if (!err) {
+    autostart.log.info('autostart'.grey + ' ok'.green.bold);
   }
 
-  console.log('Creating autostart script for ' + os.magenta);
-  autostart.create(os, command, function () {
-    console.log('Autostart '.grey + 'ok'.green);
-  });
+  process.exit(err ? 1 : 0);
 });
