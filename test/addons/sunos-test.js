@@ -17,7 +17,7 @@ autostart.config.set('root', path.join(__dirname, '..', 'root'));
 var autostartManifest = fs.readFileSync(path.join(__dirname, '..', 'fixtures', 'sunos', 'autostart.xml'), 'utf8'),
     autostartScript   = fs.readFileSync(path.join(__dirname, '..', 'fixtures', 'sunos', 'autostart.sh'), 'utf8'),
     root              = autostart.config.get('root'),
-    command           = "node app.js",
+    command           = "node app.js > output",
     service = {
       start: "node app.js",
       stop: "exit 0"
@@ -51,6 +51,7 @@ describe('SunOS Addon', function () {
       var script = fs.readFileSync(path.join(root, 'opt', 'custom', 'bin', 'autostart.sh'), 'utf8');
       assert.equal(autostartScript, script);
     });
+
   });
 
   describe('#service()', function () {
