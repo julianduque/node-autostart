@@ -13,7 +13,7 @@ $ npm install -g autostart
 ### service
 
 ```
-$ autostart service --name nodeapp --platfrom sunos --start node app.js
+$ autostart service --name nodeapp --platform sunos --start node app.js
 ```
 
 ### command
@@ -22,7 +22,7 @@ $ autostart service --name nodeapp --platfrom sunos --start node app.js
 $ autostart command --platform sunos --command forever start /opt/apps/server.js
 ```
 ## Supported Platforms
-* SunOS (pending)
+* SunOS (In progress)
 * Linux (pending)
 * Darwin (pending)
 * Win32 (pending)
