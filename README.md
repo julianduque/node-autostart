@@ -13,20 +13,20 @@ $ npm install -g autostart
 ### service
 
 ```
-$ autostart service install --name nodeapp --platform sunos --start "node app.js"
+$ autostart service --name nodeapp --platform sunos --start "node app.js"
 ```
 
 ### command
 
 ```
-$ autostart command install --platform sunos --command "forever start /opt/apps/server.js"
+$ autostart command --platform sunos --exec "forever start /opt/apps/server.js"
 ```
 
 ## Supported Platforms
-* SunOS (In progress)
-* Linux (pending)
-* Darwin (pending)
-* Win32 (pending)
+* SunOS   - Command: `ok`       - Service: `pending`
+* Linux   - Command: `pending`  - Service: `pending`
+* Darwin  - Command: `peding`   - Service: `pending`
+* Win32   - Command: `pending`  - Service: `pending`
 
 ## License
 

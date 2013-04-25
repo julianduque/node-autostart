@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
 <!DOCTYPE service_bundle SYSTEM "/usr/share/lib/xml/dtd/service_bundle.dtd.1">
 
-<service_bundle type='manifest' name='site:postboot'>
+<service_bundle type='manifest' name='site:autostart'>
   <service
-    name='site/postboot'
+    name='site/autostart'
     type='service'
     version='1'>
 
@@ -12,11 +12,11 @@
     <single_instance />
 
     <dependency
-      name='fs-root'
+      name='multiuser'
       grouping='require_all'
-      restart_on='none'
+      restart_on='error'
       type='service'>
-      <service_fmri value='svc:/system/filesystem/root' />
+      <service_fmri value='svc:/milestone/multi-user:default' />
     </dependency>
 
     <exec_method
