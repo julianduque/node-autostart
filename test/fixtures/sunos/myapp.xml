@@ -7,7 +7,7 @@
     <dependency name='multiuser' grouping='require_all' restart_on='error' type='service'>
       <service_fmri value='svc:/milestone/multi-user:default'/>
     </dependency>
-    <exec_method name='start' type='method' exec='node app.js' timeout_seconds='60'>
+    <exec_method name='start' type='method' exec='node app.js &amp;' timeout_seconds='60'>
       <method_context>
         <method_credential user='root' group='root'/>
         <method_environment>

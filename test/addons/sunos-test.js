@@ -28,7 +28,7 @@ var autostartManifest = fs.readFileSync(path.join(__dirname, '..', 'fixtures', '
     command           = "node app.js > output",
     service = {
       name: 'myapp',
-      start: "node app.js",
+      start: "node app.js &",
       stop: ":kill"
     };
 
