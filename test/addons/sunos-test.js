@@ -52,12 +52,12 @@ describe('SunOS Addon', function () {
     });
 
     it('should install autostart manifest', function () {
-      var manifest = fs.readFileSync(path.join(root, 'opt', 'custom', 'smf', 'autostart.xml'), 'utf8');
+      var manifest = fs.readFileSync(path.join(root, 'var', 'svc', 'manifest', 'site', 'autostart.xml'), 'utf8');
       assert.equal(autostartManifest, manifest);
     });
 
     it('should install autostart script', function () {
-      var script = fs.readFileSync(path.join(root, 'opt', 'custom', 'bin', 'autostart.sh'), 'utf8');
+      var script = fs.readFileSync(path.join(root, 'opt', 'local', 'bin', 'autostart.sh'), 'utf8');
       assert.equal(autostartScript, script);
     });
 
@@ -82,7 +82,7 @@ describe('SunOS Addon', function () {
     });
 
     it('should install service manifest', function () {
-      var manifest = fs.readFileSync(path.join(root, 'opt', 'custom', 'smf', service.name + '.xml'), 'utf8');
+      var manifest = fs.readFileSync(path.join(root, 'var', 'svc', 'manifest', 'application', service.name + '.xml'), 'utf8');
       assert.equal(serviceManifest, manifest);
     });
   });
