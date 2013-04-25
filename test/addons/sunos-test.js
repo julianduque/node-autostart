@@ -16,11 +16,20 @@ autostart.config.set('root', path.join(__dirname, '..', 'root'));
 
 var autostartManifest = fs.readFileSync(path.join(__dirname, '..', 'fixtures', 'sunos', 'autostart.xml'), 'utf8'),
     autostartScript   = fs.readFileSync(path.join(__dirname, '..', 'fixtures', 'sunos', 'autostart.sh'), 'utf8'),
+    serviceManifest   = fs.readFileSync(path.join(__dirname, '..', 'fixtures', 'sunos', 'myapp.xml'), 'utf8'),
     root              = autostart.config.get('root'),
     command           = "node app.js > output",
     service = {
+      name: 'myapp',
       start: "node app.js",
-      stop: "exit 0"
+      stop: ":kill"
+    };
+  root              = autostart.config.get('root'),
+    command           = "node app.js > output",
+    service = {
+      name: 'myapp',
+      start: "node app.js",
+      stop: ":kill"
     };
 
 describe('SunOS Addon', function () {
@@ -57,6 +66,24 @@ describe('SunOS Addon', function () {
   describe('#service()', function () {
     it('should exist', function () {
       should.exist(sunos.service);
+    });
+
+    before(function (next) {
+      sunos.service(service, function (err) {
+        assert.ok(!err);
+        next();
+      });
+    });
+
+    after(function (next) {
+      if (root != '/') {
+        rimraf(path.join(root, 'opt'), next);
+      }
+    });
+
+    it('should install service manifest', function () {
+      var manifest = fs.readFileSync(path.join(root, 'opt', 'custom', 'smf', service.name + '.xml'), 'utf8');
+      assert.equal(serviceManifest, manifest);
     });
   });
 });
