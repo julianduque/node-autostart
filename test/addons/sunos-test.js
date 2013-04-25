@@ -47,6 +47,7 @@ describe('SunOS Addon', function () {
 
     after(function (next) {
       if (root != '/') {
+        rimraf.sync(path.join(root, 'var', 'svc', 'manifest', 'site', 'autostart.xml'));
         rimraf(path.join(root, 'opt'), next);
       }
     });
@@ -77,6 +78,7 @@ describe('SunOS Addon', function () {
 
     after(function (next) {
       if (root != '/') {
+        rimraf.sync(path.join(root, 'var', 'svc', 'manifest', 'application', service.name + '.xml'));
         rimraf(path.join(root, 'opt'), next);
       }
     });
