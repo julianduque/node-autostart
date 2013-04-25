@@ -23,7 +23,7 @@ $ autostart command --platform sunos --exec "forever start /opt/apps/server.js"
 ```
 
 ## Supported Platforms
-* SunOS   - Command: `ok`       - Service: `pending`
+* SunOS   - Command: `ok`       - Service: `ok`
 * Linux   - Command: `pending`  - Service: `pending`
 * Darwin  - Command: `peding`   - Service: `pending`
 * Win32   - Command: `pending`  - Service: `pending`
