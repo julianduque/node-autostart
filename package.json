@@ -1,6 +1,6 @@
 {
   "name": "autostart",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "Multiplatform autostart tool for Node.js applications",
   "main": "./lib/autostart.js",
   "bin": "./bin/autostart",
@@ -12,21 +12,20 @@
     "type": "git",
     "url": "https://github.com/julianduque/node-autostart.git"
   },
+  "os": [ "sunos" ],
   "author": "Julian Duque <julianduquej@gmail.com>",
   "license": "MIT",
   "dependencies": {
     "handlebars": "~1.0.10",
-    "optimist": "~0.4.0",
-    "prompt": "~0.2.9",
     "mkdirp": "~0.3.5",
     "flatiron": "~0.3.5",
     "colors": "~0.6.0-1",
     "async": "~0.2.7",
-    "rimraf": "~2.1.4",
     "errs": "~0.2.4"
   },
   "devDependencies": {
     "mocha": "~1.9.0",
-    "chai": "~1.5.0"
+    "chai": "~1.5.0",
+    "rimraf": "~2.1.4"
   }
 }
